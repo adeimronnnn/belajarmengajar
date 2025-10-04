@@ -11,7 +11,7 @@ This is my personal website where I showcase my portfolio and blog about web dev
 
 - [GitHub](https://github.com/adeimronnnn)
 - [LinkedIn](https://www.linkedin.com/in/ade-imron-a71614382/)
-- [Instagram](https://www.instagr   am.com/deimorrr_/)
+- [Instagram](https://www.instagram.com/deimorrr_/)
 
 ## Pages
 
