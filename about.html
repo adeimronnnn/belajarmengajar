@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Ade Imron</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html" class="active">ABOUT</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="about-content">
+                <h2>Hi, I'm Ade Imron.</h2>
+                <p>Since the very beginning, I've always been drawn to the world of visuals, how light, colors, and moments can come together to tell a story. What started as simple curiosity slowly grew into something much bigger, a way for me to understand the world and to express the way I see it.</p>
+                <p>Photography has become one of my strongest passions. For me, it's not just about taking pictures; it's about capturing moments that would otherwise slip away unnoticed. I love finding beauty in the little details, in the expressions that feel raw and honest, or in the way light changes a scene completely. Photography teaches me patience, awareness, and how to see meaning even in everyday life.</p>
+                <p>Alongside that, I've always been fascinated with art painting. It gives me a different kind of freedom, one where imagination doesn't have boundaries. Painting allows me to explore emotions, ideas, and perspectives that don't always exist in reality. While photography grounds me in the present, painting pushes me to dream and create beyond what's in front of me.</p>
+                <p>These two passions complement each other, shaping not just my creative work but also how I live my life. They've helped me build a personal journey where creativity is not just a hobby, but a core part of who I am.</p>
+                <p>Looking ahead, I'm deeply committed to building a personal brand that reflects both my passion and vision. My goal is to share my work with a wider audience, collaborate with inspiring people and brands, and create projects that bring real impact. I dream of achieving success at a young age, not just for my self, but also to prove that dedication, creativity, and vision can open doors to incredible opportunities.</p>
+                <p>This portafolio is a reflection of that journey. Every piece, every photo, every creation is part of my growth, my passion, and my story. And as I continue to learn, create, and evolve, I want to bring people along this journey with me.</p>
+                <p>Welcome and thank you for being here.</p>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('nav a, .read-more');
+
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    const isExternal = this.getAttribute('target') === '_blank';
+
+                    if (href && !href.startsWith('#') && !isExternal) {
+                        e.preventDefault(); 
+                        
+                        document.body.classList.add('fade-out');
+
+                        setTimeout(() => {
+                            window.location.href = href;
+                        }, 500); 
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>

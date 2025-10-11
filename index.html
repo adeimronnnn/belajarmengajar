@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ade Imron - Home</title>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <div class="home-content">
+                <div class="image-container">
+                    <img src="pp.jpg" alt="Foto Profil Ade Imron">
+                </div>
+                <div class="text-container">
+                    <p class="greeting">HI, I'M ADE IMRON.</p>
+                    <h1>WELCOME TO MY JOURNEY OF CREATIVITY AND PASSION.</h1>
+                    <p>Welcome to my creative space, where design, code, and imagination come together. <a href="about.html" class="read-more">read more.</a></p>
+                    <p class="journey-start">My journey began in late 2023, when I first immersed myself in digital art and photography. Since then, I've been exploring, experimenting, and creating works that reflect my vision and style.</p>
+                    
+                    <div class="social-links">
+                        <p>REACH OUT:</p>
+                        
+                        <a href="https://www.instagram.com/deimorrr_/" target="_blank">
+                            <img src="instagram.png" alt="Logo Instagram">
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/ade-imron-a71614382?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+                            <img src="linkedin.png" alt="Logo LinkedIn">
+                        </a>
+
+                        <a href="https://github.com/adeimronnnn" target="_blank">
+                            <img src="github.png" alt="Logo GitHub">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const links = document.querySelectorAll('nav a, .read-more');
+
+            links.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    const isExternal = this.getAttribute('target') === '_blank';
+                    if (href && !href.startsWith('#') && !isExternal) {
+                        e.preventDefault(); 
+                        document.body.classList.add('fade-out');
+                        setTimeout(() => {
+                            window.location.href = href;
+                        }, 500);
+                    }
+                });
+            });
+        });
+    </script>
+
+</body>
+</html>
